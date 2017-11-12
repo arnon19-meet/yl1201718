@@ -6,5 +6,21 @@ gay=1
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 while (tony == gay):
 	print("hiooooooooooooo")
