@@ -44,8 +44,8 @@ class song(object):
 			print(self.lyrics[a])
 			a+=1
 
-r=song("roses are red,"
-      "violets are blue,"
-      "2+2 is 4 "
-      "-1 thats 3")
-r.sing_me_a_song()
+r=song([as"roses are red,",
+      "violets are blue,",
+      "2+2 is 4 ",
+      "-1 thats 3"])
+r.sing_me_a_song()n
