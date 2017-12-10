@@ -20,19 +20,30 @@ class ball(Turtle):
 		self.speed(speed)
 
 
+# class Reckt(Turtle):
+# 	def __init__(self, hight,width,color,speed)
+# 	Turtle.__init__(self)
+# 	shape=turtle.registershape((0,0),(hight,0),())
+
 
 ball1=ball(10,"green",1)
 ball2=ball(10,"blue",1)
 
 
-
-ball2.goto(-100,1)
-ball1.goto(0,1)
-	
+ball1.penup()
+ball2.penup()
+ball2.goto(100,100)
+ball1.goto(-100,-100)
+ball2.goto(-231,-100)	
 def check_collision(ball1,ball2):
-	if(ball1.radius+ball2.radius <=Math.sqrt(Math.pow(ball1.xcor()-ball2.xcor(),2)+(Math.pow(ball1.ycor()-ball2.ycor(),2)))):
+	if(ball1.shapesize()[0]*10+ball2.shapesize()[0]*10>=math.sqrt(math.pow(ball1.xcor()-ball2.xcor(),2)+(math.pow(ball1.ycor()-ball2.ycor(),2)))):
+		for i in range(10):
 			ball1.color("blue")
 			ball2.color("green")
 			print("boom")
+	else:
+		print("what a bummer")
+			
+check_collision(ball2,ball1)
 
 mainloop()
