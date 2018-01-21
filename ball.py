@@ -52,5 +52,3 @@ def move(self,screen_width,screen_hight):
 	else:
 		new_y= current_y-dy
 
-
-mainloop()

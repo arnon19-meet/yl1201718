@@ -36,8 +36,8 @@ ball2.goto(100,100)
 ball1.goto(-100,-100)
 ball2.goto(-231,-100)	
 def check_collision(ball1,ball2):
-	if(ball1.shapesize()[0]*10+ball2.shapesize()[0]*10>=math.sqrt(math.pow(ball1.xcor()-ball2.xcor(),2)+(math.pow(ball1.ycor()-ball2.ycor(),2)))):
-		for i in range(10):
+	if(ball_a.shapesize()[0]*10+ball_b.shapesize()[0]*10>=math.sqrt(math.pow(ball_a.xcor()-ball_b.xcor(),2)+(math.pow(ball_a.ycor()-ball_b.ycor(),2)))):
+		    for i in range(10):
 			ball1.color("blue")
 			ball2.color("green")
 			print("boom")
