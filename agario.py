@@ -48,7 +48,7 @@ def move_all_balls():
 def collide(ball_a,ball_b):
 	if ball_a==ball_b:
 		return False
-	if(ball_a.radius*10+ball_b.radius*10>=math.sqrt(math.pow(ball_a.xcor()-ball_b.xcor(),2)+(math.pow(ball_a.ycor()-ball_b.ycor(),2)))):
+	if(ball_a.radius+ball_b.radius>=math.sqrt(math.pow(ball_a.xcor()-ball_b.xcor(),2)+(math.pow(ball_a.ycor()-ball_b.ycor(),2)))):
 		return True
 	else:
 		return False
