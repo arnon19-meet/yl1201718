@@ -1,54 +1,55 @@
 import turtle
-from turtle import*
+from turtle import *
 import random
 import math
 
+# colormode(255)
 class Ball(Turtle):
-	def __init__(self,x,y,dx,dy,r,color):
+	def __init__(self,x,y,dx,dy,radius,color):
 		Turtle.__init__(self)
 		self.pu()
 		self.x=x
 		self.y=y
 		self.dx=dx
 		self.dy=dy
-		self.r=r
-		self.color=color
+		self.radius=radius
+		self.ashugauoash=color
+		self.goto(x,y)
+		self.color(color)
 		self.shape("circle")
-		self.shapesize=r/10
-		
-ball1=Ball(100,200,1,3,30,"green")	
+		self.shapesize(radius/10)
+	
 
-def move(self,screen_width,screen_hight):
-	current_x= x.cor()
-	current_y= y.cor()
+	def move(self,screen_width,screen_hight):
+		current_x= self.xcor()
+		current_y=self.ycor()
 
-	new_x= current_x+dx
-	new_y= current_y+dy
+		new_x= current_x+self.dx
+		new_y= current_y+self.dy
 
-	right_side_ball=new_x+r
-	left_side_ball=new_x-r
-	upper_side_ball=new_y+r
-	lower_side_ball=new_y-r
-	self.goto(new_x,new_y)
-	ball1.goto(new_x,new_y)
+		right_side_ball=current_x+self.radius 
+		left_side_ball=current_x-self.radius
+		upper_side_ball=current_y+self.radius
+		lower_side_ball=current_y-self.radius
 
-	if (left_side_ball <=(screen_width/2)):
-		new_x=current_x
-	else:
-		new_x= current_x-dx
+		if (left_side_ball <=(-screen_width/2)):
+			new_x=current_x
 
-	if  (right_side_ball>=(screen_width/2)):
-		new_x=current_x
-	else:
-		new_x= current_x+dx
+		else:
+			new_x= current_x-self.dx
 
-	if (upper_side_ball <=(screen_hight/2)):
-		new_y=current_y
-	else:
-		new_y= current_y+dy
+		if  (right_side_ball>=(screen_width/2)):
+			new_x=current_x
+		else:
+			new_x= current_x+self.dx
 
-	if (lower_side_ball <=(screen_hight/2)):
-		new_y=current_y
-	else:
-		new_y= current_y-dy
+		if (upper_side_ball <=(screen_hight/2)):
+			new_y=current_y
+		else:
+			new_y= current_y+self.dy
+
+		if (lower_side_ball <=(-screen_hight/2)):
+			new_y=current_y
+		else:
+			new_y= current_y-self.dy
 
